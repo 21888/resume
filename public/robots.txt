@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+
+# Host
+Host: https://me.11dz.cn
+
+# Sitemaps
+Sitemap: https://me.11dz.cn/sitemap.xml
+Sitemap: https://me.11dz.cn/server-sitemap.xml

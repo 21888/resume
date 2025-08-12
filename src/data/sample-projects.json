@@ -1,0 +1,492 @@
+[
+  {
+    "id": "e-commerce-platform",
+    "title": "E-Commerce Platform Redesign",
+    "description": "Complete redesign and modernization of a legacy e-commerce platform, focusing on user experience, performance optimization, and mobile responsiveness. Implemented modern React architecture with TypeScript, integrated payment systems, and built comprehensive admin dashboard.",
+    "category": "web",
+    "status": "completed",
+    "timeline": {
+      "startDate": "2023-01-15",
+      "endDate": "2023-08-30",
+      "duration": "7 months",
+      "isOngoing": false,
+      "milestones": [
+        {
+          "id": "design-phase",
+          "title": "Design System & Wireframes",
+          "description": "Complete design system and user interface wireframes",
+          "date": "2023-02-28",
+          "completed": true,
+          "importance": "high"
+        },
+        {
+          "id": "frontend-dev",
+          "title": "Frontend Development",
+          "description": "React frontend with TypeScript implementation",
+          "date": "2023-05-15",
+          "completed": true,
+          "importance": "critical"
+        },
+        {
+          "id": "payment-integration",
+          "title": "Payment System Integration",
+          "description": "Stripe and PayPal payment gateway integration",
+          "date": "2023-07-01",
+          "completed": true,
+          "importance": "critical"
+        },
+        {
+          "id": "launch",
+          "title": "Production Launch",
+          "description": "Full production deployment and monitoring setup",
+          "date": "2023-08-30",
+          "completed": true,
+          "importance": "critical"
+        }
+      ]
+    },
+    "metrics": {
+      "primary": [
+        {
+          "id": "conversion-rate",
+          "label": "Conversion Rate",
+          "value": 4.2,
+          "unit": "%",
+          "type": "percentage",
+          "trend": "up",
+          "icon": "trending-up",
+          "color": "success",
+          "description": "Increase in conversion rate after redesign",
+          "target": 4.0,
+          "previousValue": 2.8
+        },
+        {
+          "id": "page-load-time",
+          "label": "Page Load Time",
+          "value": 1.2,
+          "unit": "s",
+          "type": "number",
+          "trend": "down",
+          "icon": "clock",
+          "color": "success",
+          "description": "Average page load time improvement",
+          "target": 1.5,
+          "previousValue": 3.4
+        }
+      ],
+      "secondary": [
+        {
+          "id": "mobile-traffic",
+          "label": "Mobile Traffic",
+          "value": 68,
+          "unit": "%",
+          "type": "percentage",
+          "trend": "up",
+          "icon": "smartphone",
+          "color": "info",
+          "description": "Percentage of traffic from mobile devices"
+        }
+      ],
+      "kpis": [
+        {
+          "id": "user-satisfaction",
+          "label": "User Satisfaction",
+          "value": 4.7,
+          "unit": "/5",
+          "type": "number",
+          "trend": "up",
+          "icon": "star",
+          "color": "success",
+          "description": "Average user satisfaction rating",
+          "weight": 0.4,
+          "threshold": {
+            "excellent": 4.5,
+            "good": 4.0,
+            "acceptable": 3.5
+          }
+        },
+        {
+          "id": "revenue-growth",
+          "label": "Revenue Growth",
+          "value": 32,
+          "unit": "%",
+          "type": "percentage",
+          "trend": "up",
+          "icon": "dollar-sign",
+          "color": "success",
+          "description": "Revenue increase since launch",
+          "weight": 0.6,
+          "threshold": {
+            "excellent": 30,
+            "good": 20,
+            "acceptable": 10
+          }
+        }
+      ]
+    },
+    "team": [
+      {
+        "id": "john-doe",
+        "name": "John Doe",
+        "role": "Lead Frontend Developer",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+        "contribution": "Led frontend architecture and React implementation",
+        "isLead": true,
+        "skills": ["React", "TypeScript", "CSS", "JavaScript"],
+        "contactInfo": {
+          "email": "john.doe@example.com",
+          "linkedin": "https://linkedin.com/in/johndoe",
+          "github": "https://github.com/johndoe"
+        },
+        "joinDate": "2023-01-15"
+      },
+      {
+        "id": "jane-smith",
+        "name": "Jane Smith",
+        "role": "UX/UI Designer",
+        "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
+        "contribution": "Created design system and user experience flows",
+        "isLead": false,
+        "skills": ["Figma", "Design Systems", "User Research", "Prototyping"],
+        "contactInfo": {
+          "email": "jane.smith@example.com",
+          "linkedin": "https://linkedin.com/in/janesmith",
+          "portfolio": "https://janesmith.design"
+        },
+        "joinDate": "2023-01-15"
+      },
+      {
+        "id": "mike-johnson",
+        "name": "Mike Johnson",
+        "role": "Backend Developer",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+        "contribution": "Built API infrastructure and payment integrations",
+        "isLead": false,
+        "skills": ["Node.js", "Express", "MongoDB", "Stripe API"],
+        "contactInfo": {
+          "email": "mike.johnson@example.com",
+          "github": "https://github.com/mikejohnson"
+        },
+        "joinDate": "2023-02-01"
+      }
+    ],
+    "technologies": [
+      {
+        "id": "react",
+        "name": "React",
+        "category": "frontend",
+        "icon": "react",
+        "proficiency": 9,
+        "version": "18.2.0",
+        "description": "Main frontend framework",
+        "website": "https://reactjs.org"
+      },
+      {
+        "id": "typescript",
+        "name": "TypeScript",
+        "category": "frontend",
+        "icon": "typescript",
+        "proficiency": 8,
+        "version": "4.9.0",
+        "description": "Type-safe JavaScript development"
+      },
+      {
+        "id": "nodejs",
+        "name": "Node.js",
+        "category": "backend",
+        "icon": "nodejs",
+        "proficiency": 8,
+        "version": "18.0.0",
+        "description": "Backend runtime environment"
+      },
+      {
+        "id": "mongodb",
+        "name": "MongoDB",
+        "category": "database",
+        "icon": "mongodb",
+        "proficiency": 7,
+        "version": "6.0",
+        "description": "Primary database"
+      },
+      {
+        "id": "stripe",
+        "name": "Stripe",
+        "category": "platform",
+        "icon": "stripe",
+        "proficiency": 8,
+        "description": "Payment processing platform"
+      }
+    ],
+    "links": [
+      {
+        "id": "live-demo",
+        "title": "Live Demo",
+        "url": "https://ecommerce-demo.example.com",
+        "type": "demo",
+        "icon": "external-link",
+        "description": "View the live application"
+      },
+      {
+        "id": "github-repo",
+        "title": "GitHub Repository",
+        "url": "https://github.com/example/ecommerce-platform",
+        "type": "repository",
+        "icon": "github",
+        "description": "Source code repository"
+      },
+      {
+        "id": "case-study",
+        "title": "Case Study",
+        "url": "https://blog.example.com/ecommerce-redesign-case-study",
+        "type": "article",
+        "icon": "file-text",
+        "description": "Detailed project case study"
+      }
+    ],
+    "images": [
+      {
+        "id": "homepage-screenshot",
+        "url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600",
+        "alt": "E-commerce platform homepage screenshot",
+        "caption": "Modern, responsive homepage design",
+        "type": "screenshot",
+        "width": 800,
+        "height": 600,
+        "thumbnail": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300"
+      },
+      {
+        "id": "mobile-view",
+        "url": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=800",
+        "alt": "Mobile responsive design",
+        "caption": "Optimized mobile shopping experience",
+        "type": "screenshot",
+        "width": 400,
+        "height": 800,
+        "thumbnail": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=200&h=400"
+      }
+    ],
+    "tags": ["React", "E-commerce", "TypeScript", "Responsive Design", "Payment Integration"],
+    "createdAt": "2023-01-15T10:00:00Z",
+    "updatedAt": "2023-09-01T14:30:00Z"
+  },
+  {
+    "id": "mobile-fitness-app",
+    "title": "AI-Powered Fitness Tracking App",
+    "description": "Native mobile application for iOS and Android that uses machine learning to provide personalized workout recommendations and track fitness progress. Features include real-time exercise recognition, social challenges, and comprehensive analytics dashboard.",
+    "category": "mobile",
+    "status": "ongoing",
+    "timeline": {
+      "startDate": "2023-06-01",
+      "endDate": null,
+      "duration": "8 months",
+      "isOngoing": true,
+      "estimatedCompletion": "2024-02-01",
+      "milestones": [
+        {
+          "id": "mvp-release",
+          "title": "MVP Release",
+          "description": "Basic fitness tracking and workout features",
+          "date": "2023-09-15",
+          "completed": true,
+          "importance": "critical"
+        },
+        {
+          "id": "ai-integration",
+          "title": "AI Recommendation Engine",
+          "description": "Machine learning model for personalized recommendations",
+          "date": "2023-12-01",
+          "completed": false,
+          "importance": "high"
+        },
+        {
+          "id": "social-features",
+          "title": "Social Features",
+          "description": "Friend connections and challenge system",
+          "date": "2024-01-15",
+          "completed": false,
+          "importance": "medium"
+        }
+      ]
+    },
+    "metrics": {
+      "primary": [
+        {
+          "id": "daily-active-users",
+          "label": "Daily Active Users",
+          "value": 12500,
+          "type": "number",
+          "trend": "up",
+          "icon": "users",
+          "color": "success",
+          "description": "Current daily active user count",
+          "target": 15000,
+          "previousValue": 8200
+        },
+        {
+          "id": "app-rating",
+          "label": "App Store Rating",
+          "value": 4.6,
+          "unit": "/5",
+          "type": "number",
+          "trend": "up",
+          "icon": "star",
+          "color": "success",
+          "description": "Average rating across app stores",
+          "target": 4.5,
+          "previousValue": 4.3
+        }
+      ],
+      "secondary": [
+        {
+          "id": "workout-completion",
+          "label": "Workout Completion Rate",
+          "value": 78,
+          "unit": "%",
+          "type": "percentage",
+          "trend": "up",
+          "icon": "check-circle",
+          "color": "success",
+          "description": "Percentage of started workouts completed"
+        }
+      ],
+      "kpis": [
+        {
+          "id": "user-retention",
+          "label": "30-Day Retention",
+          "value": 65,
+          "unit": "%",
+          "type": "percentage",
+          "trend": "up",
+          "icon": "repeat",
+          "color": "success",
+          "description": "Users still active after 30 days",
+          "weight": 0.5,
+          "threshold": {
+            "excellent": 60,
+            "good": 45,
+            "acceptable": 30
+          }
+        },
+        {
+          "id": "premium-conversion",
+          "label": "Premium Conversion",
+          "value": 8.2,
+          "unit": "%",
+          "type": "percentage",
+          "trend": "up",
+          "icon": "crown",
+          "color": "warning",
+          "description": "Free to premium subscription rate",
+          "weight": 0.5,
+          "threshold": {
+            "excellent": 10,
+            "good": 7,
+            "acceptable": 5
+          }
+        }
+      ]
+    },
+    "team": [
+      {
+        "id": "sarah-wilson",
+        "name": "Sarah Wilson",
+        "role": "Mobile App Lead",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+        "contribution": "Leading mobile development and architecture decisions",
+        "isLead": true,
+        "skills": ["React Native", "iOS", "Android", "JavaScript"],
+        "contactInfo": {
+          "email": "sarah.wilson@example.com",
+          "linkedin": "https://linkedin.com/in/sarahwilson",
+          "github": "https://github.com/sarahwilson"
+        },
+        "joinDate": "2023-06-01"
+      },
+      {
+        "id": "alex-chen",
+        "name": "Alex Chen",
+        "role": "ML Engineer",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+        "contribution": "Developing AI recommendation algorithms",
+        "isLead": false,
+        "skills": ["Python", "TensorFlow", "Machine Learning", "Data Science"],
+        "contactInfo": {
+          "email": "alex.chen@example.com",
+          "github": "https://github.com/alexchen"
+        },
+        "joinDate": "2023-07-15"
+      }
+    ],
+    "technologies": [
+      {
+        "id": "react-native",
+        "name": "React Native",
+        "category": "frontend",
+        "icon": "react",
+        "proficiency": 9,
+        "version": "0.72.0",
+        "description": "Cross-platform mobile development"
+      },
+      {
+        "id": "tensorflow",
+        "name": "TensorFlow",
+        "category": "platform",
+        "icon": "tensorflow",
+        "proficiency": 7,
+        "version": "2.13.0",
+        "description": "Machine learning framework"
+      },
+      {
+        "id": "firebase",
+        "name": "Firebase",
+        "category": "backend",
+        "icon": "firebase",
+        "proficiency": 8,
+        "version": "9.0",
+        "description": "Backend as a service platform"
+      },
+      {
+        "id": "python",
+        "name": "Python",
+        "category": "backend",
+        "icon": "python",
+        "proficiency": 8,
+        "version": "3.11",
+        "description": "ML model development"
+      }
+    ],
+    "links": [
+      {
+        "id": "app-store",
+        "title": "Download on App Store",
+        "url": "https://apps.apple.com/app/fitness-tracker",
+        "type": "demo",
+        "icon": "smartphone",
+        "description": "Download for iOS"
+      },
+      {
+        "id": "play-store",
+        "title": "Get it on Google Play",
+        "url": "https://play.google.com/store/apps/fitness-tracker",
+        "type": "demo",
+        "icon": "smartphone",
+        "description": "Download for Android"
+      }
+    ],
+    "images": [
+      {
+        "id": "app-screenshots",
+        "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=800",
+        "alt": "Mobile app interface screenshots",
+        "caption": "Clean, intuitive mobile interface",
+        "type": "screenshot",
+        "width": 400,
+        "height": 800,
+        "thumbnail": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=400"
+      }
+    ],
+    "tags": ["React Native", "Mobile App", "AI/ML", "Fitness", "Cross-platform"],
+    "createdAt": "2023-06-01T09:00:00Z",
+    "updatedAt": "2023-11-15T16:45:00Z"
+  }
+]

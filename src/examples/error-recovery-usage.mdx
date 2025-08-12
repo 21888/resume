@@ -1,0 +1,256 @@
+# 错误恢复机制使用示例
+
+## 全局错误边界使用
+
+全局错误边界已经集成到应用中，无需额外配置。当发生未捕获的错误时，会自动显示错误回退界面。
+
+## 部分错误边界使用
+
+在特定组件中使用部分错误边界：
+
+```tsx
+import { SectionErrorBoundary } from '@/components/error';
+
+function MySection() {
+  return (
+    <SectionErrorBoundary sectionName="工作经历">
+      <ExperienceSection />
+    </SectionErrorBoundary>
+  );
+}
+```
+
+## 内容加载错误恢复
+
+使用内容恢复hook：
+
+```tsx
+import { useContentRecovery } from '@/hooks/useContentRecovery';
+
+function ContentSection({ section }: { section: string }) {
+  const {
+    handleContentError,
+    recoverContent,
+    getFallbackContent,
+    state
+  } = useContentRecovery({
+    maxRetries: 3,
+    retryDelay: 1000,
+    section,
+    fallbackContent: {
+      title: '内容暂时不可用',
+      message: '请稍后重试或联系技术支持'
+    }
+  });
+
+  const [content, setContent] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const loadContent = async () => {
+    try {
+      setLoading(true);
+      const data = await fetchContent(section);
+      setContent(data);
+    } catch (error) {
+      handleContentError(error as Error);
+      setContent(getFallbackContent());
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const retryLoading = async () => {
+    await recoverContent(loadContent);
+  };
+
+  return (
+    <div>
+      {loading && <div>加载中...</div>}
+      {content && <div>{content}</div>}
+      
+      {state.isRecovering && (
+        <div>正在重试... ({state.retryCount}/{state.maxRetries})</div>
+      )}
+    </div>
+  );
+}
+```
+
+## 网络状态监控
+
+使用网络状态hook：
+
+```tsx
+import { useNetworkStatus } from '@/hooks/useContentRecovery';
+
+function NetworkAwareComponent() {
+  const { isOnline, isOffline, wasOffline } = useNetworkStatus();
+
+  return (
+    <div>
+      {isOffline ? (
+        <div className="bg-yellow-100 p-4 rounded">
+          网络连接已断开，正在使用离线内容
+        </div>
+      ) : wasOffline ? (
+        <div className="bg-green-100 p-4 rounded">
+          网络已恢复，正在刷新内容...
+        </div>
+      ) : null}
+      
+      {/* 正常内容 */}
+    </div>
+  );
+}
+```
+
+## 错误日志记录
+
+使用错误日志工具：
+
+```tsx
+import { errorLogger } from '@/utils/errorLogger';
+
+function SomeComponent() {
+  const handleError = (error: Error) => {
+    // 记录错误到日志系统
+    errorLogger.logError(error, {
+      component: 'SomeComponent',
+      action: 'userAction',
+      userId: 'user123'
+    });
+
+    // 获取最近的错误日志
+    const recentErrors = errorLogger.getLogs(10);
+    
+    // 导出错误日志
+    const logs = errorLogger.exportLogs();
+    console.log('Error logs:', logs);
+  };
+
+  return (
+    <button onClick={() => handleError(new Error('测试错误'))}>
+      触发测试错误
+    </button>
+  );
+}
+```
+
+## 用户友好的错误消息
+
+使用预定义的错误消息：
+
+```tsx
+import { createUserFriendlyMessage } from '@/utils/errorLogger';
+
+function ErrorDisplay({ errorType }: { errorType: AppError }) {
+  const message = createUserFriendlyMessage(errorType);
+  
+  return (
+    <div className="error-message">
+      <h3>{message}</h3>
+      <p>我们正在努力解决这个问题，请稍后重试。</p>
+    </div>
+  );
+}
+```
+
+## Zustand 存储集成
+
+访问错误状态：
+
+```tsx
+import useAppStore from '@/store/app-store';
+
+function ErrorDashboard() {
+  const { error, errorHistory, clearError, dismissError } = useAppStore();
+
+  return (
+    <div>
+      {error && (
+        <div className="error-banner">
+          <p>{error.message}</p>
+          <button onClick={() => dismissError(error.timestamp)}>
+            关闭
+          </button>
+        </div>
+      )}
+      
+      <div>
+        <h3>错误历史 ({errorHistory.length})</h3>
+        {errorHistory.map((err) => (
+          <div key={err.timestamp} className="error-item">
+            <p>{err.message}</p>
+            <span>{new Date(err.timestamp).toLocaleString()}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+```
+
+## 实际应用示例
+
+在实际项目中，可以这样使用：
+
+```tsx
+// 在页面组件中使用
+import { SectionErrorBoundary } from '@/components/error';
+import { useContentRecovery } from '@/hooks/useContentRecovery';
+
+function ResumePage() {
+  const { handleContentError, recoverContent } = useContentRecovery({
+    section: 'resume-content',
+    fallbackContent: {
+      title: '简历内容',
+      message: '简历内容暂时不可用，请稍后重试'
+    }
+  });
+
+  return (
+    <div>
+      <SectionErrorBoundary sectionName="个人信息">
+        <HeroSection />
+      </SectionErrorBoundary>
+      
+      <SectionErrorBoundary sectionName="关于我">
+        <AboutSection />
+      </SectionErrorBoundary>
+      
+      <SectionErrorBoundary sectionName="工作经历">
+        <ExperienceSection />
+      </SectionErrorBoundary>
+      
+      <SectionErrorBoundary sectionName="技能">
+        <SkillsSection />
+      </SectionErrorBoundary>
+    </div>
+  );
+}
+```
+
+## 配置示例
+
+创建错误处理配置文件：
+
+```ts
+// error-config.ts
+export const errorConfig = {
+  maxRetries: 3,
+  retryDelay: 1000,
+  fallbackMessages: {
+    CONTENT_LOAD_FAILED: '内容加载失败，请检查网络连接',
+    NETWORK_ERROR: '网络连接出现问题，请稍后重试',
+    THEME_LOAD_FAILED: '主题加载失败，已使用默认主题',
+    STORAGE_ACCESS_FAILED: '本地存储访问失败，设置可能无法保存',
+    ANIMATION_INIT_FAILED: '动画效果暂时不可用',
+    ROLE_DETECTION_FAILED: '身份识别失败，请手动选择',
+    VALIDATION_ERROR: '输入验证失败，请检查您的输入',
+    UNKNOWN_ERROR: '发生了未知错误，请刷新页面重试',
+  },
+  contact: {
+    email: 'support@example.com',
+    subject: '网站错误报告',
+  },
+};

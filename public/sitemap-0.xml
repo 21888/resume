@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://me.11dz.cn/manifest.webmanifest</loc><lastmod>2025-08-12T01:49:49.501Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/test</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/debug</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/home</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>daily</changefreq><priority>1</priority></url>
+<url><loc>https://me.11dz.cn/projects</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/chromium-fingerprint-browser</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/comfyui-nlp-integration</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/dify-workflow-integration</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/douyin-keyword-dm-matrix</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/douyin-matrix-suite</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/douyin-miniapp-fun-tests</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/ecommerce-platform</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/industrial-global-site</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/lawnmower-international-site</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/live-stream-lead-gen</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/microservices-migration</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/mobile-app</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/plugin-suite</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/softlay-floor-site</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/wechat-miniapp-suite</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://me.11dz.cn/projects/wp-auto-post-coze-workflow</loc><lastmod>2025-08-12T01:49:49.502Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+</urlset>
